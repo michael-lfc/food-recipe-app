@@ -3,7 +3,7 @@
 A secure, modern recipe sharing platform where users can create, view, edit, and delete **only their own** recipes.
 
 Live Demo: coming soon  
-GitHub: https://github.com/YOUR-USERNAME/YOUR-REPO-NAME
+GitHub: https://github.com/michael-lfc/food-recipe-app.git
 
 ## Features Implemented (100% Working)
 
