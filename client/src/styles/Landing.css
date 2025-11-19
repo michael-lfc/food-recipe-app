@@ -1,0 +1,65 @@
+/* Landing page container */
+.landing-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+/* Content box */
+.landing-content {
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay for readability */
+  padding: 40px 30px;
+  border-radius: 15px;
+  z-index: 10;
+  max-width: 500px;
+}
+
+/* Headings and text */
+.landing-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.landing-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Buttons container */
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.landing-button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ff7f50; /* primary button color */
+  color: white;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* ensure clickable */
+}
+
+.landing-button:hover {
+  background-color: #ff6333;
+}
+
+/* Secondary button style */
+.landing-button.secondary {
+  background-color: #4caf50;
+}
+
+.landing-button.secondary:hover {
+  background-color: #3e8e41;
+}

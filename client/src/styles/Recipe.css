@@ -1,0 +1,106 @@
+/* Dark/Light mode support */
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --card-bg: #f8f8f8;
+  --border: #ddd;
+  --accent: #4caf50;
+}
+
+[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --text: #f5f5f5;
+  --card-bg: #262626;
+  --border: #444;
+  --accent: #66d98a;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout */
+.recipe-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Back button */
+.back-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* Recipe card styling */
+.recipe-card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.recipe-title {
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.recipe-author {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Section titles */
+.section-title {
+  margin-top: 20px;
+  font-size: 20px;
+  border-left: 4px solid var(--accent);
+  padding-left: 8px;
+}
+
+/* Ingredient list */
+.ingredient-list {
+  list-style: square;
+  margin: 10px 0 20px 20px;
+  line-height: 1.6;
+}
+
+/* Instructions */
+.recipe-instructions {
+  background: var(--bg);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  line-height: 1.6;
+}
+
+/* Edit button */
+.edit-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.25s;
+}
+
+.edit-btn:hover {
+  opacity: 0.85;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  margin-top: 50px;
+}

@@ -1,0 +1,87 @@
+/* --- Edit Page Styling --- */
+
+.edit-container {
+  max-width: 650px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.edit-container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.edit-form label {
+  font-weight: 600;
+  color: #444;
+}
+
+.edit-form input,
+.edit-form textarea {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.edit-form input:focus,
+.edit-form textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+/* --- Save Button --- */
+.save-btn {
+  padding: 0.9rem;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.25s ease;
+}
+
+.save-btn:hover {
+  background: #357acb;
+}
+
+/* --- Delete Button --- */
+.delete-btn {
+  margin-top: 1.5rem;
+  padding: 0.9rem;
+  background: #e74c3c;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 480px) {
+  .edit-container {
+    padding: 1.2rem;
+  }
+}

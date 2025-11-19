@@ -1,0 +1,26 @@
+
+### Final `.gitignore` (also in root)
+
+```gitignore
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment
+.env
+.env.local
+
+# Build
+client/build/
+client/dist/
+
+# Logs & temp
+*.log
+npm-debug.log
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
