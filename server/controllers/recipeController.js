@@ -1,4 +1,4 @@
-import { mongoose } from "mongoose";
+import mongoose from "mongoose";
 import Recipe from "../models/Recipe.js";
 
 // Helper: check ownership
