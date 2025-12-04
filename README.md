@@ -1,101 +1,65 @@
 # Food Recipe App — Full-Stack MERN with JWT Auth
 
-A secure, modern recipe sharing platform where users can create, view, edit, and delete **only their own** recipes.
+A secure, modern recipe sharing platform where users can **create, view, edit, and delete only their own recipes**.
 
-Live Demo: coming soon  
-GitHub: https://github.com/michael-lfc/food-recipe-app.git
+**LIVE DEMO:** https://michaels-recipe-app.netlify.app  
+**Backend API:** https://michael-recipe-api-1578959ef501.herokuapp.com  
+**GitHub:** https://github.com/michael-lfc/food-recipe-app
 
-## Features Implemented (100% Working)
+**Deployed & Fully Functional — November 2025**
 
-### Backend (Node.js + Express + MongoDB)
+---
+
+### Features Implemented (100% Working)
+
+#### Backend (Node.js + Express + MongoDB Atlas)
 - User registration & login (JWT + bcrypt)
-- Protected routes with token validation
+- Protected routes with token validation middleware
 - Ownership system — users can **only** edit/delete their own recipes
 - Full CRUD for recipes
-- CORS + environment variables
+- CORS enabled + environment variables
+- Live on Heroku (free tier)
 
-**API Endpoints:**
-
-POST   /users/register
-POST   /users/login
-GET    /recipes
-GET    /recipes/:id
-POST   /recipes          (protected)
-PUT    /recipes/:id      (protected + owner only)
-DELETE /recipes/:id      (protected + owner only)
-
-
-### Frontend (React + React Router)
+#### Frontend (React + React Router + Axios)
 - Beautiful landing page
 - View all recipes (public)
 - View single recipe
 - Create, edit, delete recipes (only if logged in & owner)
-- Responsive-ready
+- Responsive design ready
+- Live on Netlify
 
-## Yet to Be Implemented (Final 5%)
+---
 
-| Feature                          | Status     |
-|----------------------------------|------------|
-| Login / Register page (`/auth`)  | Not done   |
-| Username system (show username, not email) | Not done   |
-| Protected route wrapper          | Not done   |
-| Hide Edit/Delete on others' recipes | Not done (but secure in backend) |
-| Smart redirect after login       | Not done   |
-| Logout button                    | Not done   |
+### API Endpoints (All Live & Working)
 
-**After adding these → 100% production-ready**
+| Method | Endpoint                | Description                          | Auth Required?     |
+|--------|-------------------------|--------------------------------------|--------------------|
+| POST   | `/users/register`       | Register new user                    | No                 |
+| POST   | `/users/login`          | Login → returns JWT token            | No                 |
+| GET    | `/recipes`              | Get all recipes                      | No                 |
+| GET    | `/recipes/:id`          | Get single recipe                    | No                 |
+| POST   | `/recipes`              | Create new recipe                    | Yes (JWT)          |
+| PUT    | `/recipes/:id`          | Update recipe (owner only)           | Yes + Owner only   |
+| DELETE | `/recipes/:id`          | Delete recipe (owner only)           | Yes + Owner only   |
+| GET    | `/users/all`            | Get all users (for testing/admin)    | Yes (JWT)          |
 
-## Exact Folder Structure
-food-recipe_app/
-├── .gitignore
-├── README.md                   
-│
-├── server/
-│   ├── controllers/
-│   ├── middleware/
-│   │   └── tokenValidation.js
-│   ├── models/
-│   │   ├── User.js
-│   │   └── Recipe.js
-│   ├── routes/
-│   │   ├── userRoutes.js
-│   │   └── recipeRoutes.js
-│   ├── db.js
-│   └── app.js
-│
-└── client/ (or src folder directly in root)
-└── src/
-├── components/
-│   ├── Layout.js
-│   └── Navbar.js
-├── context/
-│   ├── RecipeContext.js
-│   └── ThemeContext.js
-├── styles/
-│   ├── Create.css
-│   ├── Edit.css
-│   ├── Home.css
-│   ├── Landing.css
-│   └── navbar.css
-├── pages/
-│   ├── Landing.js
-│   ├── Home.js
-│   ├── Recipe.js
-│   ├── Create.js
-│   └── Edit.js
-├── api/
-├── App.js
-└── index.js
+**Test API live:** https://michael-recipe-api-1578959ef501.herokuapp.com/recipes
 
+---
 
-## Tech Stack
+### Tech Stack
 
-- **Frontend**: React, React Router, Context API, Axios
-- **Backend**: Node.js, Express, MongoDB, Mongoose
-- **Auth**: JWT + bcrypt
-- **Styling**: Custom CSS (organized in `styles/` folder)
+| Layer       | Technology                                      |
+|-------------|--------------------------------------------------|
+| Frontend    | React, React Router, Axios, Custom CSS           |
+| Backend     | Node.js, Express, Mongoose                       |
+| Database    | MongoDB Atlas                                    |
+| Auth        | JWT + bcrypt                                     |
+| Deployment  | Frontend → Netlify<br>Backend → Heroku           |
 
-## How to Run
+---
+
+### How to Run Locally
 
 ```bash
 # Backend
@@ -103,20 +67,52 @@ cd server
 npm install
 npm run dev
 
-# Frontend
-cd client
-npm start
+# Frontend (in another terminal)
 
 Backend → http://localhost:4000
 Frontend → http://localhost:3000
 
-Security
+
+Security Highlights
 
 Only recipe owners can edit/delete (enforced in backend)
 JWT tokens required for all protected actions
+Passwords hashed with bcrypt
 Email never shown publicly
-Ready for username display system
+Ready for username display & beautiful auth UI
 
 
-Status: 95% complete — just needs login UI and username
-Next step: Add /auth page with Username + Email + Password
+Folder Structure
+textfood-recipe-app/
+├── server/
+│   ├── controllers/
+│   ├── middleware/tokenValidation.js
+│   ├── models/User.js & Recipe.js
+│   ├── routes/userRoutes.js & recipeRoutes.js
+│   ├── db.js
+│   └── app.js
+└── client/
+    └── src/
+        ├── components/
+        ├── pages/
+        ├── api/api.js
+        ├── styles/
+        ├── App.js
+        └── index.js
+
+Status: 95% Complete → Final 5% Coming Soon
+
+Feature to be added later:
+Beautiful /auth page
+Username system
+Protected route wrapper
+Smart redirect after login
+Logout button
+Hide Edit/Delete for others
+After adding these → 100% production-ready portfolio masterpiece
+
+Made with passion by Michael Agwogie
+Full-Stack Developer | Nigeria | 2025
+cd client
+npm install
+npm start
