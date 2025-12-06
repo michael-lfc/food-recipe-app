@@ -45,10 +45,24 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 
 // CORS configuration
-app.use(cors({
-  origin: ["https://michaels-recipe-app.netlify.app"], // your frontend URL
-  credentials: true,
-}));
+// app.use(cors({
+//   origin: ["https://michaels-recipe-app.netlify.app"], // your frontend URL
+//   credentials: true,
+// }));
+
+app.use(
+  cors({
+    origin: [
+      "https://michaels-recipe-app.netlify.app",
+      "http://localhost:5173",
+      "http://localhost:3000",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
+
 
 // Root route for testing
 app.get("/", (req, res) => {
