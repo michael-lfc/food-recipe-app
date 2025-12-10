@@ -2,8 +2,7 @@
 
 A secure, modern recipe sharing platform where users can **create, view, edit, and delete only their own recipes**.
 
-**LIVE DEMO:** https://michaels-recipe-app.netlify.app  
-**Backend API:** https://michael-recipe-api-1578959ef501.herokuapp.com  
+**LIVE DEMO:** https://michaels-recipe-app.netlify.app   
 **GitHub:** https://github.com/michael-lfc/food-recipe-app
 
 **Deployed & Fully Functional — November 2025**
